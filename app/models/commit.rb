@@ -24,11 +24,9 @@ class Commit < OpenStruct
     commits = []
     repo_commits.each do |repo|
       repo.each do |commit|
-        if commit[:commit][:author][:name] == username
         commits << Commit.new({date:     commit[:commit][:author][:date].to_time.in_time_zone,
                                repo_url: commit[:html_url],
                                message:  commit[:commit][:message]})
-        end
       end
     end
     commits[0..9]

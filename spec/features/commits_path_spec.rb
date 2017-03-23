@@ -21,7 +21,7 @@ describe 'dashboard page' do
         expect(page).to have_selector('#commit_link', count: 10)
 
         within all('#commit_message').first do
-          expect(page).to have_content('Merge pull request #36')
+          expect(page).to have_content('bundled')
         end
       end
     end

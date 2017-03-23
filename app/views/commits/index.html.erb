@@ -4,9 +4,9 @@
     <div class="panel-heading">
       <h4 class="panel-title"><%= commit.date %></h4>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id='commit_message'>
       Message: <p align="left"><%= commit.message %></p>
-      <a href="<%= commit.repo_url %>" class="btn btn-success btn-lg" role="button">View Commit</a>
+      <a href="<%= commit.repo_url %>" class="btn btn-success btn-lg" role="button" id='commit_link'>View Commit</a>
     </div>
   </div>
 </div>

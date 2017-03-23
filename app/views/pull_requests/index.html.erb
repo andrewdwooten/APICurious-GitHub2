@@ -1,12 +1,12 @@
-<h2 align="center">Your Open Pull Requests</h2>
+<h2 align="center" id='welcome_banner'>Your Open Pull Requests</h2>
 <% @pull_requests.each do |pr| %>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title"><%= pr.repo %></h4>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id='pull_request_title'>
       Title: <p align="left"><%= pr.title %></p>
-      <a href="<%= pr.url %>" class="btn btn-success btn-lg" role="button">View Pull Request</a>
+      <a href="<%= pr.url %>" class="btn btn-success btn-lg" role="button" id='pull_request_link'>View Pull Request</a>
     </div>
   </div>
 </div>

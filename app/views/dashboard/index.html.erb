@@ -1,11 +1,11 @@
 <div class='container'>
   <div class="jumbotron">
     <div class='container'>
-      <div class='col-md-6'>
+      <div class='col-md-6' id='welcome_message'>
         <h1>Welcome <%= current_user.name %>!</h1>
         <p>Browse around to check out your GitHub stuff</p>
         <p>Lovingly artisanally yanked from the depths of the GitHub API</p>
-        <a href="/logout" class="btn btn-danger btn-lg" role="button">Logout</a>
+        <a href="/logout" class="btn btn-danger btn-lg" role="button" id='logout_button'>Logout</a>
       </div>
       <div class='col-md-6'>
         <p align=right><img src=<%= current_user.image %>></p>
@@ -14,7 +14,7 @@
   </div>
 </div>
 <div class='row text-center'>
-  <div class='col-md-4'>
+  <div class='col-md-4' id='stars'>
     <h4> Starred Repository Count:</h4>
     <ul>
       <li>
@@ -22,7 +22,7 @@
       </li>
     </ul>
   </div>
-  <div class='col-md-4'>
+  <div class='col-md-4' id='followers'>
     <h4> Followers</h4>
     <ul>
       <% @followers.each do |follower|  %>
@@ -33,7 +33,7 @@
     </ul>
 
   </div>
-  <div class='col-md-4'>
+  <div class='col-md-4' id='following'>
     <h4>Following:</h4>
     <ul>
       <% @following.each do |followed| %>

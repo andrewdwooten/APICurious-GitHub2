@@ -1,0 +1,10 @@
+<div class='container'>
+  <div class="jumbotron">
+    <h3>Create a New Repository</h3>
+    <div class="card-action">
+      <%= form_tag(repositories_path, :method=>'post', :multipart => true) do %>
+        <%= text_field_tag "name", placeholder='Repo Name' %>
+        <%= submit_tag 'Create Repo' %>
+      <% end %>
+  </div>
+</div>

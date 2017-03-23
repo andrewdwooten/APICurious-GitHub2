@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Your Repositories</div>
+  <div class="panel-body">
+    <p>Here's a handy-dandy list of all of your repositories.</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
+      <th> Repo Name</th>
+      <th> Last Updated</th>
+      <th> Link-y Button</th>
+    </tr>
+    <% @repositories.each do |repo| %>
+      <tr>
+        <td><%= repo.name%></td>
+        <td><%= repo.updated_at%></td>
+        <td><a href="https://github.com/<%= repo.url_ext%>" class="btn btn-success btn-lg" role="button">Visit Repo</a></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

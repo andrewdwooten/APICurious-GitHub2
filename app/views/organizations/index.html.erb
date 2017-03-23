@@ -1,0 +1,9 @@
+<h2 align="center">Your Organizations</h2>
+<% @organizations.each do |org| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title"><%= org.login %></h4>
+    </div>
+  </div>
+</div>
+<% end %>

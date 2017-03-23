@@ -1,0 +1,13 @@
+<h2 align="center">Your 10 Most Recent Commits</h2>
+<% @commits.each do |commit| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title"><%= commit.date %></h4>
+    </div>
+    <div class="panel-body">
+      Message: <p align="left"><%= commit.message %></p>
+      <a href="<%= commit.repo_url %>" class="btn btn-success btn-lg" role="button">View Commit</a>
+    </div>
+  </div>
+</div>
+<% end %>

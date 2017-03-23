@@ -1,0 +1,46 @@
+<div class='container'>
+  <div class="jumbotron">
+    <div class='container'>
+      <div class='col-md-6'>
+        <h1>Welcome <%= current_user.name %>!</h1>
+        <p>Browse around to check out your GitHub stuff</p>
+        <p>Lovingly artisanally yanked from the depths of the GitHub API</p>
+        <a href="/logout" class="btn btn-danger btn-lg" role="button">Logout</a>
+      </div>
+      <div class='col-md-6'>
+        <p align=right><img src=<%= current_user.image %>></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='row text-center'>
+  <div class='col-md-4'>
+    <h4> Starred Repository Count:</h4>
+    <ul>
+      <li>
+        <%= @star_count %>
+      </li>
+    </ul>
+  </div>
+  <div class='col-md-4'>
+    <h4> Followers</h4>
+    <ul>
+      <% @followers.each do |follower|  %>
+        <li>
+          <a href="<%= follower.html_url %>"><%= follower.login %></a>
+        </li>
+      <% end %>
+    </ul>
+
+  </div>
+  <div class='col-md-4'>
+    <h4>Following:</h4>
+    <ul>
+      <% @following.each do |followed| %>
+      <li>
+        <a href="<%= followed.html_url %>"><%= followed.login %></a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

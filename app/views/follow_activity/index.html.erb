@@ -1,9 +1,9 @@
-<h2 align="center">Followed Recent Activity</h2>
+<h2 align="center" id='welcome_banner'>Followed Recent Activity</h2>
 <% @follow_activity.each do |hash| %>
     <% hash.each do |user, commits| %>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3>Followed User: <%= user %></h3>
+        <h3 id="followed_username">Followed User: <%= user %></h3>
       </div>
     </div>
       <% commits.each do |commit| %>
@@ -11,9 +11,9 @@
           <div class="panel-heading">
             <h4 class="panel-title"><%= commit.date %></h4>
           </div>
-          <div class="panel-body">
+          <div class="panel-body" id='commit_message'>
             Message: <p align="left"><%= commit.message %></p>
-            <a href="<%= commit.repo_url %>" class="btn btn-success btn-lg" role="button">View Commit</a>
+            <a href="<%= commit.repo_url %>" class="btn btn-success btn-lg" role="button" id='commit_link'>View Commit</a>
           </div>
         </div>
       <% end %>

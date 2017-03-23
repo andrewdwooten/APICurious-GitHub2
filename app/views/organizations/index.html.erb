@@ -1,8 +1,8 @@
-<h2 align="center">Your Organizations</h2>
+<h2 align="center" id='welcome_banner'>Your Organizations</h2>
 <% @organizations.each do |org| %>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h4 class="panel-title"><%= org.login %></h4>
+      <h4 class="panel-title" id='organization_name'><%= org.login %></h4>
     </div>
   </div>
 </div>
